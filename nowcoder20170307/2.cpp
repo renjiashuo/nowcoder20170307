@@ -27,7 +27,7 @@ int main()
 	{
 		if (L % 2 == 1)
 		{
-			if (N % L == 0 && N / L - L / 2 > 0)
+			if (N % L == 0 && N / L - L / 2 >= 0)
 			{
 				long M = N / L;
 				for (int i = M - L / 2; i <= M + L / 2; i++)
@@ -41,7 +41,7 @@ int main()
 		}
 		else
 		{
-			if (N % (L / 2) == 0 && (N / (L / 2)) % 2 == 1 && (N / (L / 2)) / 2 - L / 2 > 0)
+			if (N % (L / 2) == 0 && (N / (L / 2)) % 2 == 1 && (N / (L / 2)) / 2 - L / 2 + 1 >= 0)
 			{
 				long M = (N / (L / 2));
 				for (int i = M / 2 - L / 2 + 1; i <= M / 2 + L / 2; i++)

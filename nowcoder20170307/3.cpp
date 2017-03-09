@@ -350,21 +350,75 @@ int NumberOf9Between1AndN_Solution(int n)
 	return result;
 }
 
+void Number(int n)
+{
+	int num[10] = { 0 };
+	for (int i = 1; i <= n; i++)
+	{
+		int N = i;
+		while (N != 0)
+		{
+			int N_last = N % 10;
+			switch (N_last)
+			{
+			case 0:
+				num[0]++;
+				break;
+			case 1:
+				num[1]++;
+				break;
+			case 2:
+				num[2]++;
+				break;
+			case 3:
+				num[3]++;
+				break;
+			case 4:
+				num[4]++;
+				break;
+			case 5:
+				num[5]++;
+				break;
+			case 6:
+				num[6]++;
+				break;
+			case 7:
+				num[7]++;
+				break;
+			case 8:
+				num[8]++;
+				break;
+			case 9:
+				num[9]++;
+				break;
+			}
+			N /= 10;
+		}
+	}
+	for (int i = 0; i < 9; i++)
+	{
+		cout << num[i] << " ";
+	}
+	cout << num[9];
+}
+
 int main()
 {
 	int n = 999;
-	//cin >> n;
+	cin >> n;
 
-	cout << NumberOf0Between1AndN_Solution(n) << " ";
-	cout << NumberOf1Between1AndN_Solution(n) << " ";
-	cout << NumberOf2Between1AndN_Solution(n) << " ";
-	cout << NumberOf3Between1AndN_Solution(n) << " ";
-	cout << NumberOf4Between1AndN_Solution(n) << " ";
-	cout << NumberOf5Between1AndN_Solution(n) << " ";
-	cout << NumberOf6Between1AndN_Solution(n) << " ";
-	cout << NumberOf7Between1AndN_Solution(n) << " ";
-	cout << NumberOf8Between1AndN_Solution(n) << " ";
-	cout << NumberOf9Between1AndN_Solution(n);
+	Number(n);
+
+	//cout << NumberOf0Between1AndN_Solution(n) << " ";
+	//cout << NumberOf1Between1AndN_Solution(n) << " ";
+	//cout << NumberOf2Between1AndN_Solution(n) << " ";
+	//cout << NumberOf3Between1AndN_Solution(n) << " ";
+	//cout << NumberOf4Between1AndN_Solution(n) << " ";
+	//cout << NumberOf5Between1AndN_Solution(n) << " ";
+	//cout << NumberOf6Between1AndN_Solution(n) << " ";
+	//cout << NumberOf7Between1AndN_Solution(n) << " ";
+	//cout << NumberOf8Between1AndN_Solution(n) << " ";
+	//cout << NumberOf9Between1AndN_Solution(n);
 
 	return 0;
 }
